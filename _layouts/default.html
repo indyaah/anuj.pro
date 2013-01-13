@@ -1,0 +1,93 @@
+{% assign description = "Java developer." %}
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> 	
+<html lang="en"> 
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />	<!-- Force Latest IE rendering engine -->
+    <title>{{ page.title }}</title>
+
+    <script type="text/javascript">
+var analytics=analytics||[];analytics.load=function(e){var
+  t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"===document.location.protocol?"https://":"http://")+"d2dq2ahtl5zl1z.cloudfront.net/analytics.js/v1/"+e+"/analytics.min.js";var
+  n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);var
+  r=function(e){return
+    function(){analytics.push([e].concat(Array.prototype.slice.call(arguments,0)))}},i=["identify","track","pageview","ab"];for(var
+                                                                                                                                s=0;s<i.length;s++)analytics[i[s]]=r(i[s])},
+                                                                                                                              analytics.load("yxwwir08tl");
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href="http://feeds.feedburner.com/indyaah" rel="alternate" title="indyaah" type="application/atom+xml" /> 
+    <link rel="shortcut icon" href="/static/images/favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!--[if IE 7]>
+      <script src="/static/css/font-awesome-ie7.css"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">	
+      <div id='mobile' class='two columns hidden'>
+        <ul>
+          <li><a href='/'>indyaah</a></li>
+          <li><span class="gray">Anuj Patel</span></li>
+          <li><a href="mailto:indyaah@gmail.com" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile', 'Sidebar Email']);">indyaah@gmail.com</a></li>
+          <li><a href="http://twitter.com/_indyaah"
+            onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Mobile',
+          'Sidebar Twitter']);">@_indyaah</a></li>
+        </ul>
+      </div>
+
+      <div class="four columns sidebar">
+        <section>
+          <a id="avatar" href="/"></a>
+
+          <ul id="social">
+            <li>
+              <a href="mailto:indyaah@gmail.com?subject=hi" class="icon-envelope-alt" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Sidebar Email']);" title="Say hi"></a>
+            </li>
+
+            <li>
+              <a href="http://twitter.com/_indyaah" class="icon-twitter" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Sidebar Twitter']);" title="You should follow me" style="font-size: 28px;"></a>
+            </li>
+
+            <li>
+              <a href="http://github.com/indyaah" class="icon-github" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Sidebar Github']);" title="I share and fork code here"></a>
+            </li>
+
+            <li>
+              <a href="skype:indyaah?add" class="icon-comment" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Sidebar Skype']);" title="Feel free to add me on Skype"></a>
+            </li>
+
+            <li>
+              <a href="http://feeds.feedburner.com/indyaah" class="icon-rss" onClick="_gaq.push(['_trackEvent', 'Link', 'Click', 'Sidebar RSS']);" title="RSS"></a>
+            </li>
+          </ul>
+
+          <ul id="me">
+            <li>Anuj Patel</span></li>
+            <li class="gray">{{ description }}</li>
+          </ul>
+
+        </section>
+      </div>
+
+      {{ content }}
+    </div>
+
+    <script> var _gaq=[["_setAccount","UA-27969676-2"],["_trackPageview"]]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1; g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js"; s.parentNode.insertBefore(g,s)}(document,"script")); </script>
+  </body>
+</html> 
