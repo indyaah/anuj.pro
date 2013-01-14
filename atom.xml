@@ -4,11 +4,11 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>indyaah</title>
- <link href="http://indyaah.github.com/atom.xml" rel="self"/>
- <link href="http://indyaah.github.com/"/>
+ <title>Anuj Patel</title>
+ <link href="http://anuj.pro/atom.xml" rel="self"/>
+ <link href="http://anuj.pro/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://indyaah.github.com</id>
+ <id>http://anuj.pro</id>
  <author>
    <name>indyaah</name>
    <email>indyaah@gmail.com</email>
@@ -17,9 +17,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://indyaah.github.com{{ post.url }}"/>
+   <link href="http://anuj.pro{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http:/indyaah.github.com{{ post.id }}</id>
+   <id>http:/anuj.pro{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
