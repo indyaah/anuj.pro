@@ -22,7 +22,7 @@ I'm Anuj, currently living in Ahmedabad, after brief stays at Pune & Chandigarh,
 
 I've been that <strong>b & w screen </strong>lover since I started out in Computer Science, and follower of OpenSource ideology.
 
-As of now I have worked with mainly Java/J2EE  and related technologies/frameworks and explored number of them. But there no great badges around my under my belt.
+As of now I have worked with mainly Java/J2EE  and related technologies/frameworks and explored number of them. But there are no great badges around my belt.
 Trying to learn a lot of things, any given time you'll find me wandering & wondering in my quest for knowledge.
 
 I also have great interest in systems & performance engineering. Love to work with *NIX systems and trying to tweak things.
