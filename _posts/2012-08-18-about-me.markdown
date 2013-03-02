@@ -22,12 +22,12 @@ I'm Anuj, currently living in Ahmedabad, after brief stays at Pune & Chandigarh,
 
 I've been that <strong>b & w screen </strong>lover since I started out in Computer Science, and follower of OpenSource ideology.
 
-As of now I have worked with mainly Java/J2EE  and related technologies/frameworks and explored number of them. But there no great badges around my under my belt.
+As of now I have worked with mainly Java/J2EE  and related technologies/frameworks and explored number of them. But there are no great badges around my belt.
 Trying to learn a lot of things, any given time you'll find me wandering & wondering in my quest for knowledge.
 
 I also have great interest in systems & performance engineering. Love to work with *NIX systems and trying to tweak things.
 
-After learning things from various technical blogs, and a final push by one of my colleagues, decided to take up on writing a blog which I have been postponing/delaying/avoiding/etc for quite a while.
+After learning things from various technical blogs, and a final push by one of my colleagues, decided to take up on writing a blog which I have been procrastinating for quite a while.
 
 This <a href="http://anuj.pro">blog</a>, I have setup as technical blog (just writing this page as of now), while will be setting up another blog for non-technical interests (there are many) at <a href="http://www.patelanuj.com" target="_blank">http://patelanuj.com</a>
 
