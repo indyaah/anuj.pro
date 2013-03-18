@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My E with PostgreSQL (Part 1)
+title: My Encounters with PostgreSQL (Part 1)
 ---
 
 > From Dolphin to the Elephant
