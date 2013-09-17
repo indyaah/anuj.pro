@@ -12,7 +12,7 @@ layout: nil
  <id>http://anuj.pro/</id>
  <author>
    <name>Anuj Patel</name>
-   <email>anuj@anuj.pro</email>
+   <email>contact@anuj.pro</email>
  </author>
 
  {% for post in site.posts limit:10 %}
