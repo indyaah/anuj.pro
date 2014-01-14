@@ -20,7 +20,6 @@ If you're sure that there some unique word in the task description you can use t
 
 To add a task `task-add "task_no. task description"`
 
-
-![Alt text](../images/bash-todo.png)
+<img src="../images/bash-todo.png" style="width: 100%;" alt="Bash Image" />
 
 TO_BE_UPDATED with code (and github link).!
