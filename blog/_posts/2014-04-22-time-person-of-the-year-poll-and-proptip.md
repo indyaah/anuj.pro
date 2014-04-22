@@ -21,22 +21,14 @@ public class TimeProtipPollVoter {
 
     public static void main(String args[]){
         WebDriver webDriver = new FirefoxDriver();
-        webDriver.get("https://poptip.com/embed/v2/?pollID=53471fff0b038134ef000dbf&displayConfig=01011110&featureConfig=1111&orientation=h&color=dark");
-        webDriver.findElement(By.xpath(".//*[@id='pt-w-bars']/div[2]")).click();
-        webDriver.findElement(By.xpath(".//*[@id='pt-w-wrapper']/div[4]/div/a[2]")).click();
-
-        Set<String> windowId = webDriver.getWindowHandles();
-        Iterator<String> itererator = windowId.iterator();
-
-        String mainWinID = itererator.next();
-        String newAdwinID = itererator.next();
-        webDriver.switchTo().window(newAdwinID);
+        webDriver.get("BLAH");
+        webDriver.findElement(By.xpath("BLAH")).click();
+        webDriver.findElement(By.xpath("BLAH")).click();
         webDriver.findElement(By.id("status")).sendKeys((i++).toString());
         webDriver.findElement(By.name("session[username_or_email]")).sendKeys("USERNAME");
         webDriver.findElement(By.name("session[password]")).sendKeys("PASSWORD");
         webDriver.findElement(By.xpath(".//*[@id='update-form']/div[4]/fieldset[2]/input[2]")).click();
         webDriver.close();
-        webDriver.switchTo().window(mainWinID).close();
         webDriver.quit();
     }
 }
