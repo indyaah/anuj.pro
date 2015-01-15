@@ -34,5 +34,8 @@ public class TimeProtipPollVoter {
 }
 ```
 
+**UPDATE**
+=========
+Turns out the results were calculated after offsetting the spams, but still to me the poll was questionable.
 
 [1]: http://patelanuj.com/post/83461827453/why-i-dont-take-times-poll-seriously
