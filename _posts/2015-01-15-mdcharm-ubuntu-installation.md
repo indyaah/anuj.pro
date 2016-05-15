@@ -16,7 +16,7 @@ Steps :
 
 2. Install gdebi if you are not using it yet. ```sh sudo apt-get install gdebi```
 
-3. ```sh sudo gdebi mdcharm_X.Y_amd64.deb``
+3. ```sh sudo gdebi mdcharm_X.Y_amd64.deb```
 
 4. After the installation try starting the meld from commandline. (Starting from commandline to see if any errors are reported, most likely there is one in particular.)
 
