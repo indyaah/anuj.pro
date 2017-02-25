@@ -1,0 +1,28 @@
+---
+permalink: atom.xml
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Anuj Patel</title>
+ <link href="http://anuj.pro/blog/atom.xml" rel="self"/>
+ <link href="http://anuj.pro/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://anuj.pro/</id>
+ <author>
+   <name>Anuj Patel</name>
+   <email>contact@anuj.pro</email>
+ </author>
+
+ {% for post in site.posts limit:10 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://anuj.pro{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://anuj.pro{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
