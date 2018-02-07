@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/anujpatel
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://anuj.pro
+  * I am anujpatel (https://keybase.io/anujpatel) on keybase.
+  * I have a public key ASC3q7Lt_7Wdwn11sGGEC0-7uuAxrd9XESucRjUvjMPDGAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b7abb2edffb59dc27d75b061840b4fbbbae031addf57112b9c46352f8cc3c3180a",
+      "host": "keybase.io",
+      "kid": "0120b7abb2edffb59dc27d75b061840b4fbbbae031addf57112b9c46352f8cc3c3180a",
+      "uid": "e519194c34378b569c9001fd89564819",
+      "username": "anujpatel"
+    },
+    "merkle_root": {
+      "ctime": 1517996745,
+      "hash": "2a56f853dbb0ec79a246eaa9691739c8a9cb52ade7b7b7bd86545a3b77e8b5856b5db16f83c2a6620f4280973d90537326c31a6b97fad497c248cbe9f1a38434",
+      "hash_meta": "9b471520f10aa2c2b55850bc0ae491c877f70cd6e8a8eebaaade29d4e0e6dc48",
+      "seqno": 2045498
+    },
+    "service": {
+      "hostname": "anuj.pro",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.40"
+  },
+  "ctime": 1517996757,
+  "expire_in": 504576000,
+  "prev": "c0675e81abf8ed3b842e8b49ebe17337eed7a7bd5475ed6aaf75c444fd2d2ee8",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgt6uy7f+1ncJ9dbBhhAtPu7rgMa3fVxErnEY1L4zDwxgKp3BheWxvYWTFA0J7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjdhYmIyZWRmZmI1OWRjMjdkNzViMDYxODQwYjRmYmJiYWUwMzFhZGRmNTcxMTJiOWM0NjM1MmY4Y2MzYzMxODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjdhYmIyZWRmZmI1OWRjMjdkNzViMDYxODQwYjRmYmJiYWUwMzFhZGRmNTcxMTJiOWM0NjM1MmY4Y2MzYzMxODBhIiwidWlkIjoiZTUxOTE5NGMzNDM3OGI1NjljOTAwMWZkODk1NjQ4MTkiLCJ1c2VybmFtZSI6ImFudWpwYXRlbCJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxNzk5Njc0NSwiaGFzaCI6IjJhNTZmODUzZGJiMGVjNzlhMjQ2ZWFhOTY5MTczOWM4YTljYjUyYWRlN2I3YjdiZDg2NTQ1YTNiNzdlOGI1ODU2YjVkYjE2ZjgzYzJhNjYyMGY0MjgwOTczZDkwNTM3MzI2YzMxYTZiOTdmYWQ0OTdjMjQ4Y2JlOWYxYTM4NDM0IiwiaGFzaF9tZXRhIjoiOWI0NzE1MjBmMTBhYTJjMmI1NTg1MGJjMGFlNDkxYzg3N2Y3MGNkNmU4YThlZWJhYWFkZTI5ZDRlMGU2ZGM0OCIsInNlcW5vIjoyMDQ1NDk4fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImFudWoucHJvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuNDAifSwiY3RpbWUiOjE1MTc5OTY3NTcsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiYzA2NzVlODFhYmY4ZWQzYjg0MmU4YjQ5ZWJlMTczMzdlZWQ3YTdiZDU0NzVlZDZhYWY3NWM0NDRmZDJkMmVlOCIsInNlcW5vIjoyMCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBaEwKYIcIypvO7HuMcglpz2S88jxyuboVWDUyI/MwoyxKeu2MT/9f9l+vKHcXHIdZYVYqDtrKSToiQvHzYT/ELqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgT5PpBjKldCBn2+tDQBY/BYr/Yg3RQHCwzV5U/i5dF4CjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/anujpatel
+
+==================================================================
