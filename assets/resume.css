@@ -1,0 +1,104 @@
+/* Global design tokens */
+:root{
+  --ink:#101828;
+  --muted:#475467;
+  --accent:#0b72ff;
+  --art:#000;
+  --paper:#ffffff;
+  --border:#EAECF0;
+  --pad:18px;
+  --maxw:794px;
+
+  --font-body: 'Tabular-Variable', 'Tabular-Regular', Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+  --font-head: var(--font-body);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: var(--font-body);
+  font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  color:var(--ink); background:#F2F4F7; overflow-x:hidden;
+}
+.shell{min-height:100%; display:flex; flex-direction:column}
+header.site{ background:linear-gradient(180deg,#fff, #f9fafc); border-bottom:1px solid var(--border) }
+.wrap{max-width:var(--maxw); margin:0 auto; padding:12px var(--pad)}
+.title{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
+.title h1{font-size:28px; margin:6px 0; letter-spacing:.2px}
+.title .role{color:var(--muted)}
+.actions{margin-left:auto; display:flex; gap:10px}
+.btn{ appearance:none; border:1px solid var(--border); background:#fff; color:var(--ink); padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600; font-size:14px }
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+
+/* Content panes */
+.panes{flex:1; display:flex}
+.pane{display:none}
+.pane.active{display:block}
+
+/* PDF viewer fills the viewport under the header */
+#pdf-pane{height:calc(100vh - 64px)}
+.pdf-embed{width:100%; height:100%; border:0; background:#fff}
+.pdf-fallback{padding:28px var(--pad); text-align:center}
+
+/* HTML resume styles */
+.resume{max-width:var(--maxw); margin:18px auto 32px; background:var(--paper); border:1px solid var(--border); border-radius:12px; box-shadow:0 2px 8px rgba(16,24,40,.06)}
+.resume .hdr{display:flex; flex-wrap:wrap; gap:12px; padding:28px; border-bottom:1px solid var(--border)}
+.resume .hdr .who{flex:1 1 360px}
+.resume .hdr h1{margin:0; font-size:28px; font-weight:700}
+.resume .hdr .title{margin-top:6px; color:var(--muted)}
+.resume .hdr .contact{flex:1 1 260px; display:flex; flex-direction:column; gap:6px}
+.resume .hdr .contact a{color:var(--ink); text-decoration:none}
+.resume .hdr .contacts-line{margin-top:8px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px 12px}
+.resume .hdr .contacts-line a{color:inherit; text-decoration:none}
+.resume .hdr .contacts-line .dot{color:#D0D5DD}
+.resume .hdr{position:relative; padding-right:96px}
+.resume .hdr .deco{position:absolute; top:16px; right:16px; width:72px; height:72px; color:var(--art); opacity:.8}
+.resume .hdr .deco svg{display:block; width:100%; height:100%}
+.resume .hdr h1, .resume .sec h2{font-family: var(--font-head)}
+
+@media (max-width: 720px){
+  .resume .hdr{padding-right:72px}
+  .resume .hdr .deco{top:12px; right:12px; width:56px; height:56px; opacity:.6}
+}
+.resume .sec{padding:22px 28px; border-top:1px solid var(--border)}
+.resume .sec:first-of-type{border-top:0}
+.resume .sec h2{margin:0 0 10px; font-size:16px; letter-spacing:.4px; text-transform:uppercase; color:#344054}
+.resume .grid{display:grid; grid-template-columns: 280px 1fr; gap:18px}
+.resume .pill{display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; margin:4px 6px 0 0; background:#fbfcff}
+.muted{color:var(--muted)}
+.item{margin-bottom:16px}
+.role{font-weight:700}
+.meta{color:var(--muted); font-size:13px}
+ul.tight{margin:8px 0 0 18px; font-size:15px}
+.dev-note{color:var(--muted); font-size:12px; text-align:center; padding:10px}
+
+/* Theme 2: two-column */
+.resume.theme-t2 .columns{display:grid; grid-template-columns:260px 1fr; gap:18px}
+.resume.theme-t2 .aside{padding-right:18px; border-right:1px solid var(--border)}
+.resume.theme-t2 .aside .pill{margin-top:6px}
+.resume.theme-t2 .main{padding-left:0}
+
+.resume.theme-t3 .hdr{border-bottom:0; padding-bottom:12px}
+.resume.theme-t3 .hdr .deco{display:none}
+.resume.theme-t3 .hdr .subline{color:var(--muted); font-style:italic; margin-top:6px}
+.resume.theme-t3 .sec h2{margin:0 0 10px; font-size:18px; font-weight:700; letter-spacing:0; text-transform:none; color:var(--ink); padding-bottom:10px; border-bottom:1px solid var(--border)}
+.resume.theme-t3 .item .role{font-weight:700}
+.resume.theme-t3 .item .submeta{color:var(--muted); font-style:italic; margin-top:2px}
+.resume.theme-t3 ul.tight{font-size:14px}
+
+/* Theme 3 font override: use Inter for t3 */
+.resume.theme-t3{ --font-body: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif; --font-head: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif }
+
+@media (max-width: 720px){
+  .resume .grid{grid-template-columns: 1fr}
+  .resume.theme-t2 .columns{grid-template-columns: 1fr}
+  .resume.theme-t2 .aside{border-right:0; padding-right:0}
+  #pdf-pane{height:auto}
+}
+
+@media print{
+  body{background:#fff}
+  header.site, .dev-note{display:none}
+  .resume{box-shadow:none; border:0; margin:0}
+  .resume .sec{page-break-inside:avoid}
+}

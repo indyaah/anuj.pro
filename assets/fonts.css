@@ -1,0 +1,22 @@
+/* Minimal font-face declarations for Tabular fonts used by the site */
+/* Keep only Variable and Regular families to minimize payload */
+
+@font-face {
+  font-family: 'Tabular-Variable';
+  src: url('fonts/Tabular-Variable.woff2') format('woff2'),
+       url('fonts/Tabular-Variable.woff') format('woff'),
+       url('fonts/Tabular-Variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tabular-Regular';
+  src: url('fonts/Tabular-Regular.woff2') format('woff2'),
+       url('fonts/Tabular-Regular.woff') format('woff'),
+       url('fonts/Tabular-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

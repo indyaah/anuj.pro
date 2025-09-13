@@ -1,0 +1,99 @@
+theme: t3
+name: Anuj Patel
+title: Software Engineer | Engineering Leader
+location: Philadelphia, USA
+email: contact@anuj.pro
+summary: >-
+  Hands-on engineering leader with over 14 years of experience in value delivery.
+  Demonstrates a strong track record in architecture, modernization, strategic
+  roadmap planning/execution, leading teams to deliver scalable business objectives.
+skills:
+  - category: Skills
+    items:
+      - Engineering Leadership
+      - Roadmap Planning
+      - Mentoring
+      - Software Architecture
+      - Cloud Architecture
+      - API Design
+      - Database Design
+      - Microservices
+      - Kubernetes
+      - DevSecOps
+      - Java
+      - AWS
+      - Kafka
+      - Maven
+      - Gradle
+      - gRPC
+      - JUnit
+      - Cucumber
+      - Python
+      - JavaScript
+      - PostgreSQL
+      - MySQL
+experience:
+  - company: Empower
+    role: Senior Software Architect
+    location: Remote, USA
+    start: Jun 2022
+    end: Present
+    highlights:
+      - Strategic roadmap planning for Cloud Platform value-stream (9 teams) while focusing on delivery and staying 100% hands-on.
+      - Maintained close partnerships with key business stakeholders, Enterprise Architecture, Infrastructure, Security and other value-streams within the business unit (30+ full stack teams).
+      - Architected and delivered a major initiative to merge two production stacks with hard timeline and severe resource, and scaling constraints.
+      - Designed an enterprise-wide system to eliminate p2p integration across systems of record while boasting scalability (200K RPS @ 4ms p95).
+      - Lead BAU delivery, highlights include numerous security patches and major version upgrades across 50+ microservices (JDK21, Spring Boot 2.7 and 3.x).
+      - Pioneered numerous internal tooling and continuous enhancements (gRPC adoption, custom spring boot starters, RDS IAM auth, CI/CD).
+  - company: Onera Inc
+    role: Director Of Engineering
+    location: Remote, USA
+    start: Apr 2021
+    end: Jun 2022
+    highlights:
+      - Mentored and lead a modest engineering team, while focusing on removing execution barriers to ensure team efficiency.
+      - Partnered with product team to develop strategic roadmap while coordinating with customer facing team to optimize business operations.
+      - Delivered a green-field product in matter of months that was the key lever for acquisition.
+  - company: Personal Capital
+    role: Principal Software Engineer
+    location: Redwood City, CA
+    start: Aug 2019
+    end: Apr 2021
+    highlights:
+      - Part of key engineering team that manages omni-channel advice/experiences delivered to free dashboard users and wealth management clients.
+      - Spearheaded decoupling of system with cyclic dependencies, broke down a monolith to microservices and migrated from plain EC2 to Kubernetes, establishing vertical ownership model through documentation and automation improvements.
+      - Mentored engineers, expanding their technical influence and skills.
+  - company: Citrine Informatics
+    role: Senior Software Engineer
+    location: Redwood City, CA
+    start: Jun 2018
+    end: Aug 2019
+    highlights:
+      - Delivered prototypes that informed product strategy, contributing to measurable platform improvements.
+      - Applied analytical skills to identify and solve technical challenges, ensuring seamless integration.
+      - Facilitated cross-functional communication, fostering a collaborative development environment.
+  - company: Smaato Inc
+    role: Software Engineer
+    location: Hamburg, Germany
+    start: Aug 2015
+    end: May 2018
+    highlights:
+      - Part of Smaato's core product team that served 35Bn requests a day.
+      - Pioneered CI/CD implementation with canary testing and blue-green rollouts, revolutionizing deployment processes and significantly reducing system downtime at Smaato Inc.
+      - Fostered DevOps culture by mentoring team members on automation best practices, creating knowledge-sharing sessions that improved collective technical capabilities.
+      - Analyzed system bottlenecks and implemented targeted automation solutions that measurably improved deployment frequency while maintaining robust quality standards.
+  - company: Various
+    role: Software Engineer
+    location: India
+    start: Oct 2010
+    end: Jul 2015
+    highlights:
+      - Engineered cleantech solutions, enhancing sustainability and efficiency.
+      - Led fintech team, developed reconciliation product, learned from market challenges.
+      - Directed team of 5 developers at healthcare consultancy, orchestrating software solutions for US healthcare clients while ensuring compliance with industry regulations.
+education:
+  - school: Sardar Patel University
+    degree: Bachelors of Engineering
+    year: 2006 - 2010
+    location: Vallabh Vidyanagar, India
+certifications: []

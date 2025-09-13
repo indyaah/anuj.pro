@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anuj.pro/resume.schema.json",
+  "title": "Resume Schema (HTML renderer for anuj.pro)",
+  "description": "JSON structure expected by index.html to render the resume as HTML.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "description": "Full name" },
+    "title": { "type": "string", "minLength": 1, "description": "Professional title, e.g., Senior Software Architect" },
+    "location": { "type": "string", "description": "City, Country" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string", "description": "Phone number in any display format" },
+    "links": {
+      "type": "array",
+      "description": "External links such as LinkedIn, GitHub, Website, etc.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1, "description": "Human-friendly label, e.g., LinkedIn" },
+          "url": { "type": "string", "format": "uri", "description": "https://…" }
+        },
+        "required": ["label", "url"]
+      }
+    },
+    "summary": { "type": "string", "description": "Short professional summary/overview" },
+    "skills": {
+      "type": "array",
+      "description": "Skill groups displayed as badges",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "category": { "type": "string", "minLength": 1, "description": "Group name, e.g., Languages, Cloud, Databases" },
+          "items": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1,
+            "description": "List of skills in this category"
+          }
+        },
+        "required": ["category", "items"]
+      }
+    },
+    "experience": {
+      "type": "array",
+      "description": "Work experience in reverse chronological order",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "minLength": 1 },
+          "location": { "type": "string" },
+          "start": { "type": "string", "minLength": 1, "description": "Start date in a human-readable format, e.g., Jan 2021" },
+          "end": { "type": ["string", "null"], "description": "End date or 'Present'" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "description": "Bullet points describing achievements, impact, or responsibilities"
+          }
+        },
+        "required": ["company", "role", "start"]
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "school": { "type": "string", "minLength": 1 },
+          "degree": { "type": "string", "minLength": 1 },
+          "year": { "type": "string", "description": "Graduation/completion year or range" },
+          "location": { "type": "string" },
+          "note": { "type": "string", "description": "Optional extra details, GPA, honors, etc." }
+        },
+        "required": ["school", "degree"]
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "issuer": { "type": "string" },
+          "year": { "type": "string" }
+        },
+        "required": ["name"]
+      }
+    },
+    "theme": {
+      "type": "string",
+      "description": "Optional theme selection. Supported: t1 (single-column), t2 (two-column), t3 (single-column)."
+    }
+  },
+  "required": ["name", "title"],
+  "examples": [
+    {
+      "name": "Anuj Patel",
+      "title": "Senior Software Architect",
+      "location": "City, Country",
+      "email": "anuj@example.com",
+      "phone": "+1-555-123-4567",
+      "links": [
+        {"label": "LinkedIn", "url": "https://www.linkedin.com/in/…"},
+        {"label": "GitHub", "url": "https://github.com/indyaah"}
+      ],
+      "summary": "Short professional summary.",
+      "skills": [
+        {"category": "Languages", "items": ["Java", "Kotlin", "TypeScript"]},
+        {"category": "Cloud", "items": ["AWS", "GCP"]}
+      ],
+      "experience": [
+        {
+          "company": "Company Name",
+          "role": "Senior Software Architect",
+          "location": "City, Country",
+          "start": "Jan 2021",
+          "end": "Present",
+          "highlights": [
+            "Key achievement one.",
+            "Key achievement two."
+          ]
+        }
+      ],
+      "education": [
+        {"school": "University Name", "degree": "B.Tech in …", "year": "2011"}
+      ],
+      "certifications": [
+        {"name": "Certification Name", "issuer": "Issuer", "year": "2023"}
+      ]
+    }
+  ]
+}
