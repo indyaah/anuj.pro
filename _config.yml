@@ -1,0 +1,11 @@
+title: "Anuj Patel — Senior Software Architect — Resume"
+description: "Resume of Anuj Patel, Senior Software Architect"
+url: "https://anuj.pro"
+baseurl: ""
+# Keep default permalink structure
+permalink: pretty
+# Ensure GitHub Pages safe mode compatibility
+markdown: kramdown
+highlighter: rouge
+# Exclude nothing important; assets and resume.yaml should be copied as-is
+# (Only files with front matter are processed by Jekyll.)
