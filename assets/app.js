@@ -22,7 +22,11 @@ function parseMaybeJSON(text){
 }
 
 async function loadResumeData(){
-  const candidates = ['resume.yaml','resume.yml','resume.json'];
+  const candidates = [
+    'resume.json','/resume.json',
+    'resume.yaml','/resume.yaml',
+    'resume.yml','/resume.yml'
+  ];
   for (const p of candidates){
     const file = await tryFetch(p);
     if(!file) continue;
@@ -49,12 +53,17 @@ async function loadResumeData(){
 }
 
 async function bootstrap(){
-  const data = await loadResumeData();
-  if(data){
-    renderResume(data);
-    devNote.hidden = true;
-  }else{
-    devNote.hidden = false;
+  try{
+    const data = await loadResumeData();
+    if(data){
+      renderResume(data);
+      devNote.hidden = true;
+    }else{
+      devNote.hidden = false;
+    }
+  }catch(e){
+    console.error('Failed to initialize resume renderer', e);
+    if (devNote) devNote.hidden = false;
   }
 }
 
