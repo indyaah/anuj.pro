@@ -1,0 +1,44 @@
+title: "Anuj Patel - Software Engineer | Engineering Leader"
+description: "Resume of Anuj Patel, Software Engineer | Engineering Leader"
+url: "https://anuj.pro"
+baseurl: ""
+
+# Keep directories
+include:
+  - CNAME
+
+# Exclude local/build artifacts
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - package.json
+  - package-lock.json
+  - vendor
+  - .gitignore
+
+# Markdown processor (even if we don't use much markdown, it's fine)
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins supported by GitHub Pages are commented out for minimal setup
+# plugins:
+#   - jekyll-seo-tag
+
+# Permalinks
+permalink: pretty
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []
+
+# Plugins
+plugins:
+  - jekyll-minifier
