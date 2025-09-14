@@ -1,16 +1,61 @@
+// Debug logger with toggle via URL params (?debug=0 to disable; ?debug=1 or ?log=1 to enable)
+const LOG = (() => {
+  const qs = new URLSearchParams(location.search);
+  let enabled = true;
+  if (qs.has('debug') || qs.has('log')) {
+    const raw = (qs.get('debug') ?? qs.get('log')) || '';
+    const v = raw.toString().toLowerCase();
+    enabled = (v === '' || v === '1' || v === 'true' || v === 'yes');
+  }
+  const prefix = '[RESUME_LOG]';
+  const out = (kind, args) => {
+    try { (console[kind] || console.log).apply(console, [prefix, ...args]); } catch (_) {}
+  };
+  return {
+    get enabled() { return enabled; },
+    set enabled(v) { enabled = !!v; },
+    log: (...a) => enabled && out('log', a),
+    info: (...a) => enabled && out('info', a),
+    warn: (...a) => out('warn', a),
+    error: (...a) => out('error', a)
+  };
+})();
+
 // Tiny helper to select nodes
 const $ = sel => document.querySelector(sel);
 const resumeRoot = $('#resume');
 const devNote = $('#dev-note');
 
+function getAppJsVersion() {
+  try {
+    const s = Array.from(document.scripts || []).find(sc => /assets\/app\.js/.test(sc.src || ''));
+    if (!s) return null;
+    const u = new URL(s.src, location.origin);
+    return u.searchParams.get('v') || null;
+  } catch (_) { return null; }
+}
+
+LOG.info('app.js loaded', { href: location.href, readyState: document.readyState, version: getAppJsVersion() });
+
+// Global error surfacing
+window.addEventListener('error', e => {
+  LOG.error('window.error', e.message, `${e.filename || ''}:${e.lineno || ''}:${e.colno || ''}`, e.error || null);
+});
+window.addEventListener('unhandledrejection', e => {
+  LOG.error('unhandledrejection', e.reason);
+});
+
 // Try to load resume.yaml/yml or resume.json; if present, render HTML view; else show note.
 async function tryFetch(path){
   try{
+    LOG.info('fetch:start', path);
     const res = await fetch(path, {cache:'no-store'});
+    LOG.info('fetch:response', { path, status: res.status, ok: res.ok, url: res.url });
     if(!res.ok) return null;
     const text = await res.text();
+    LOG.info('fetch:text:len', { path, bytes: text.length });
     return { path, text };
-  }catch(e){ return null; }
+  }catch(e){ LOG.warn('fetch:error', path, e); return null; }
 }
 
 function parseMaybeJSON(text){
@@ -27,42 +72,52 @@ async function loadResumeData(){
     'resume.yaml','/resume.yaml',
     'resume.yml','/resume.yml'
   ];
+  LOG.info('loader:candidates', candidates);
   for (const p of candidates){
+    LOG.info('loader:try', p);
     const file = await tryFetch(p);
-    if(!file) continue;
+    if(!file){ LOG.info('loader:miss', p); continue; }
     try{
       if(p.endsWith('.json')){
-        return JSON.parse(file.text);
+        const obj = JSON.parse(file.text);
+        LOG.info('loader:parsed:json', p, Object.keys(obj || {}).length+' keys');
+        return obj;
       }
       // YAML or unknown extension: if it looks like JSON, parse as JSON
       const maybe = parseMaybeJSON(file.text);
-      if(maybe) return maybe;
+      if(maybe){ LOG.info('loader:parsed:json-like', p); return maybe; }
       // Otherwise, try YAML via js-yaml if available
       if(window.jsyaml && typeof window.jsyaml.load === 'function'){
-        return window.jsyaml.load(file.text);
+        const y = window.jsyaml.load(file.text);
+        LOG.info('loader:parsed:yaml', p);
+        return y;
       } else {
-        console.warn('YAML parser not available for', p);
+        LOG.warn('loader:yaml:parser-missing', p);
         continue;
       }
     }catch(e){
-      console.error('Failed to parse', p, e);
+      LOG.error('loader:parse:error', p, e);
       continue;
     }
   }
+  LOG.warn('loader:none-found');
   return null;
 }
 
 async function bootstrap(){
   try{
+    LOG.info('bootstrap:start');
     const data = await loadResumeData();
     if(data){
+      LOG.info('bootstrap:data:ok', Object.keys(data || {}));
       renderResume(data);
-      devNote.hidden = true;
+      if (devNote) devNote.hidden = true;
     }else{
-      devNote.hidden = false;
+      LOG.warn('bootstrap:no-data');
+      if (devNote) devNote.hidden = false;
     }
   }catch(e){
-    console.error('Failed to initialize resume renderer', e);
+    LOG.error('bootstrap:error', e);
     if (devNote) devNote.hidden = false;
   }
 }
@@ -319,11 +374,24 @@ function renderResume(d){
   })(th);
 
   // Apply theme class to root
+  LOG.info('render:theme:raw', th);
+  LOG.info('render:theme:norm', norm);
   resumeRoot.className = `resume theme-${norm}`;
+  LOG.info('render:theme:applied-class', resumeRoot.className);
 
   if(norm === 't2') return renderResumeTheme2(d);
   if(norm === 't3') return renderResumeTheme3(d);
   return renderResumeTheme1(d);
 }
 
-window.addEventListener('DOMContentLoaded', bootstrap);
+
+
+if (document.readyState !== 'loading') {
+    console.log('Documnent ready, bootstrapping');
+    bootstrap();
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('Document not ready, bootstrapping on DOMContentLoaded');
+        bootstrap();
+    });
+}
